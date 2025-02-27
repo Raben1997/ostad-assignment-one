@@ -1,0 +1,326 @@
+/* Header Section */
+.headerSec {
+  background: var(--secondary);
+}
+#toggleMenuBtn {
+  display: none;
+}
+.headerBx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 0;
+}
+.logo h1 {
+  display: inline-block;
+  color: var(--primary);
+}
+.logo h1 span {
+  display: inline-block;
+  color: var(--text);
+}
+.navMenu {
+  display: flex;
+  align-items: center;
+}
+.navMenu li {
+  list-style: none;
+  position: relative;
+  transition: 0.5s all;
+  padding: 10px 15px;
+}
+.navMenu li:last-child a {
+  padding-right: 0;
+}
+.navMenu li a {
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.5s all;
+  display: inline-block;
+  position: relative;
+}
+.navMenu li a::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: 0.5s all;
+  background: var(--primary);
+}
+.navMenu li a:hover::before {
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  #toggleMenuBtn {
+    display: block;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: var(--primary);
+    cursor: pointer;
+  }
+  #toggleMenuBtn .menuClose,
+  #toggleMenuBtn.active .menuOpen {
+    display: none;
+  }
+  #toggleMenuBtn.active .menuClose {
+    display: block;
+  }
+  .navMenu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 98%;
+    left: 0;
+    width: 100%;
+    transition: 0.5s all;
+    background: var(--accent);
+    z-index: 9;
+  }
+  .navMenu.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s all;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+  }
+  .navMenu.active li {
+    display: block;
+  }
+  .navMenu.active li a {
+    width: 100%;
+  }
+  .navMenu.active li:hover a {
+    background: var(--secondary);
+    color: var(--primary);
+  }
+  .headerSec .container {
+    padding: 0;
+  }
+  .headerBx .logo {
+    margin-left: 15px;
+    display: inline-block;
+  }
+  #toggleMenuBtn {
+    margin-right: 15px;
+  }
+  .navMenu li {
+    padding: 0;
+  }
+  .navMenu li a {
+    padding: 10px 15px;
+  }
+  .navMenu li a::before {
+    display: none;
+  }
+}
+
+/* Footer Section */
+.footerSec {
+  background: var(--secondary);
+  padding: 50px 0 30px;
+  text-align: center;
+}
+.footerPart {
+  padding-bottom: 20px;
+}
+.footerBx .logo {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.footerPart h5 {
+  color: var(--primary);
+  padding-bottom: 10px;
+}
+.footerPart li {
+  list-style: none;
+}
+.footerPart2 li {
+  margin-bottom: 10px;
+}
+.footerPart2 li a,
+.socialMenu li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.5s all;
+}
+.footerPart2 li a {
+  padding: 10px;
+  display: inline-block;
+}
+.footerPart2 li a:hover,
+.socialMenu li a:hover {
+  color: var(--primary);
+}
+.socialMenu {
+  padding-top: 10px;
+}
+.socialMenu,
+.footerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.socialMenu li,
+.footerMenu li {
+  margin: 0 10px;
+}
+@media (max-width: 575px) {
+  .footerSec {
+    padding: 25px 0 15px;
+  }
+  .footerPart {
+    padding-bottom: 10px;
+  }
+  .footerMenu li {
+    margin: 0;
+  }
+  .footerPart2 li a {
+    padding: 5px 10px;
+  }
+  .footerMenu {
+    padding-bottom: 10px;
+  }
+}
+/* Banner Section */
+.bannerBox {
+  position: relative;
+  height: 450px;
+}
+.bannerBox::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: var(--text);
+  opacity: 0.8;
+}
+.bannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxTop {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.bannerTxt {
+  text-align: center;
+  color: var(--background);
+}
+.bannerTxt h2,
+.bannerTxt p {
+  padding-bottom: 15px;
+}
+.btnClick {
+  background: var(--secondary);
+  text-align: center;
+  padding: 12px 30px;
+  text-decoration: none;
+  transition: 0.5s all;
+  color: var(--text);
+  display: inline-block;
+  border: 2px solid var(--primary);
+}
+.btnClick:hover {
+  background: var(--accent);
+}
+@media only screen and (max-width: 991px) {
+  .bannerTxt p br {
+    display: none;
+  }
+  .bannerBox {
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .bannerBox {
+    height: 300px;
+  }
+}
+/* About Section */
+.aboutSec {
+  padding: 50px 0;
+  background: var(--background);
+}
+.aboutBx {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.aboutLeft,
+.aboutRight {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.aboutRight h5,
+.aboutRight h2 span {
+  color: var(--primary);
+}
+.aboutRight h2,
+.aboutRight h4 {
+  color: var(--accent);
+}
+.aboutRight h5,
+.aboutRight h2,
+.aboutRight h4 {
+  padding-bottom: 15px;
+}
+.aboutRight p,
+.aboutRight li {
+  padding-bottom: 10px;
+}
+.aboutRight h4 {
+  padding-top: 15px;
+}
+.aboutRight ul {
+  padding-bottom: 15px;
+}
+.aboutRight li {
+  position: relative;
+  list-style: none;
+  padding-left: 25px;
+}
+.aboutRight li::before {
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.aboutLeft {
+  padding-right: 30px;
+}
+.aboutLeft img {
+  max-width: 100%;
+  max-height: 550px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 575px) {
+  .aboutSec {
+    padding: 30px 0;
+  }
+  .aboutLeft {
+    padding: 0 0 20px;
+  }
+  .aboutLeft,
+  .aboutRight {
+    width: 100%;
+  }
+  .aboutLeft img {
+    max-height: 350px;
+  }
+}
